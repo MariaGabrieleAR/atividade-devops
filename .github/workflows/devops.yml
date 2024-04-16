@@ -1,9 +1,9 @@
 image: python
 
 stages: 
--build
--test
--deploy
+  - build
+  - test
+  - deploy
 
 build-job:
   stage: build
@@ -15,7 +15,8 @@ test-count:
   script:
     - python3 count.py
 
-  deploy:
-    stage: deploy
-    script:
-      - echo "terminou"
+deploy-job:
+  stage: deploy
+  script:
+    - echo "terminou"
+
